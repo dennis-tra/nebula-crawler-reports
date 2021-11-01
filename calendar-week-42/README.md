@@ -16,7 +16,9 @@ The following results show measurement data that was collected in calendar week 
 - Number of crawls `336`
 - Number of visits `8,532,595` ([what is a visit?](#terminology))
 - Number of unique peer IDs visited `59,083`
-- Number of unique IP addresses found `94,080`
+- Number of unique IP addresses found `128,620`
+
+Timestamps are in UTC if not mentioned otherwise.
 
 ### Agent Versions
 
@@ -36,8 +38,8 @@ Newly discovered agent versions:
 
 Newly discovered protocols:
 
-- `/lilu.red/op/1/file` (2021-10-18 13:04:45)
 - `/lilu.red/op/1/text` (2021-10-18 13:04:45)
+- `/lilu.red/op/1/file` (2021-10-18 13:04:45)
 
 ### Classification
 
@@ -54,18 +56,18 @@ Node classification:
 
 ### Top 10 Rotating Hosts
 
-| IP-Address      | Country | Unique Peer IDs | Agent Versions                |
-| :-------------- | :------ | --------------: | :---------------------------- |
-| 165.227.24.133  | US      |            5233 | ['hydra-booster/0.7.4', None] |
-| 82.165.18.239   | DE      |            1609 | ['go-ipfs/0.4.22/', None]     |
-| 159.65.71.229   | US      |             348 | [None]                        |
-| 159.65.110.234  | US      |             273 | [None]                        |
-| 138.197.207.75  | US      |             265 | [None]                        |
-| 159.65.108.245  | US      |             249 | [None]                        |
-| 138.68.47.189   | US      |             183 | [None]                        |
-| 138.68.45.10    | US      |             180 | [None]                        |
-| 116.202.229.43  | DE      |             148 | ['hydra-booster/0.7.4', None] |
-| 123.157.156.218 | CN      |             101 | [None]                        |
+| IP-Address     | Country | Unique Peer IDs | Agent Versions                                  |
+| :------------- | :------ | --------------: | :---------------------------------------------- |
+| 165.227.24.133 | US      |            5340 | ['hydra-booster/0.7.4', None]                   |
+| 82.165.18.239  | DE      |            1609 | ['go-ipfs/0.4.22/', None]                       |
+| 159.65.71.229  | US      |             400 | [None]                                          |
+| 138.197.207.75 | US      |             301 | [None]                                          |
+| 159.65.110.234 | US      |             300 | [None]                                          |
+| 159.65.108.245 | US      |             300 | [None]                                          |
+| 159.203.76.161 | US      |             274 | ['github.com/ipfs-shipyard/ipfs-counter', None] |
+| 138.68.47.189  | US      |             200 | [None]                                          |
+| 138.68.45.10   | US      |             200 | [None]                                          |
+| 116.202.229.43 | DE      |             195 | ['hydra-booster/0.7.4', None]                   |
 
 ### Crawl Time Series
 
@@ -140,6 +142,7 @@ Resolution Classification:
 
 ![](./plots/geo-agents.png)
 
+
 ## Latencies
 
 ### Overall
@@ -152,7 +155,7 @@ Resolution Classification:
 
 ### By Continent
 
-![](./plots/geo-dial-latency-distribution.png)
+![](./plots/latencies-geo.png)
 
 ## Cloud
 
@@ -164,52 +167,37 @@ The number next to `Total` indicates the number of unique IP addresses that went
 
 ### Classification
 
-#### Offline
+![](./plots/cloud-classification.png)
 
-![](./plots/cloud-offline.png)
+### Agents
 
-#### Online
+![](./plots/cloud-agents.png)
 
-![](./plots/cloud-online.png)
 
-#### Dangling
+## Top Updating Peers
 
-![](./plots/cloud-dangling.png)
+| Peer ID               | Final AV                     | # Transitions | Distinct AVs                                         | # Distinct AVs |
+| :-------------------- | :--------------------------- | ------------- | :--------------------------------------------------- | -------------- |
+| `12D3KooWQcDBKQcu...` | `go-ipfs/0.9.1/`             | 176           | go-ipfs/0.8.0/<br/>go-ipfs/0.9.1/                    | 2              |
+| `12D3KooWK6aUYpst...` | `go-ipfs/0.7.0/`             | 147           | go-ipfs/0.7.0/<br/>go-ipfs/0.8.0/                    | 2              |
+| `12D3KooWP8Kn2f8J...` | `go-ipfs/0.8.0-rc2/`         | 130           | go-ipfs/0.8.0/<br/>go-ipfs/0.8.0-rc2/                | 2              |
+| `12D3KooWHy8L7J7W...` | `go-ipfs/0.11.0-dev/5a61bed` | 120           | go-ipfs/0.11.0-dev/65d570c<br/>go-ipfs/0.9.1/dc2715a | 2              |
+| `12D3KooWDCimcERh...` | `go-ipfs/0.8.0/`             | 109           | go-ipfs/0.8.0/<br/>go-ipfs/0.9.1/                    | 2              |
+| `12D3KooWNgxATDv4...` | `go-ipfs/0.10.0/`            | 101           | go-ipfs/0.10.0/<br/>go-ipfs/0.8.0/                   | 2              |
+| `12D3KooWBTPdtYzR...` | `go-ipfs/0.8.0-rc2/`         | 54            | go-ipfs/0.8.0/<br/>go-ipfs/0.8.0-rc2/                | 2              |
+| `12D3KooWJyhcTeMd...` | `go-ipfs/0.10.0/64b532f`     | 8             | go-ipfs/0.10.0/64b532f<br/>go-ipfs/0.8.0-rc1/02d15ac | 2              |
+| `12D3KooWAuvjpgxA...` | `go-ipfs/0.9.1/`             | 6             | go-ipfs/0.8.0/<br/>go-ipfs/0.9.1/                    | 2              |
+| `12D3KooWK9UTmMz5...` | `go-ipfs/0.9.1/`             | 2             | go-ipfs/0.10.0/<br/>go-ipfs/0.9.1/                   | 2              |
 
-### Agent Version
-
-#### Hydra
-
-![](./plots/cloud-hydra.png)
-
-#### ioi
-
-![](./plots/cloud-ioi.png)
-
-#### storm
-
-![](./plots/cloud-storm.png)
+> `AV` = `Agent Version`
+ 
+- `# Final AV` - The last agent version that was observed in this measurement period
+- `# Transitions` - How often did this particular peer change its agent version
+- `Distinct AVs` - Distinct agent version that this peer transitioned between (could have had a single AV multiple times)
 
 ## Terminology
 
-- `visit` - Visiting a peer means dialing or connecting to it. Every time the crawler or monitoring task tries to dial or connect to a peer the following data is saved:
-  
-  ```sql
-  id               SERIAL
-  peer_id          SERIAL      NOT NULL -- this is now the internal database ID (not the peerID)
-  crawl_id         INT                  -- can be null if this peer was visited from the monitoring task
-  session_id       INT                  
-  dial_duration    INTERVAL             -- The time it took to dial the peer or until an error occurred (NULL for crawl visits)
-  connect_duration INTERVAL             -- The time it took to connect with the peer or until an error occurred (NULL for monitoring visits)
-  crawl_duration   INTERVAL             -- The time it took to crawl the peer also if an error occurred (NULL for monitoring visits)
-  updated_at       TIMESTAMPTZ NOT NULL 
-  created_at       TIMESTAMPTZ NOT NULL 
-  type             visit_type  NOT NULL -- either `dial` or `crawl`
-  error            dial_error
-  protocols_set_id INT                  -- a foreign key to the protocol set that this peer supported at this visit (NULL for monitoring visits as peers are just dialed)
-  agent_version_id INT                  -- a foreign key to the peers agent version at this visit (NULL for monitoring visits as peers are just dialed)
-  multi_addresses_set_id INT            -- a foreign key to the multi address set that was used to connect/dial for this visit
-  ```
+- `visit` - Visiting a peer means dialing or connecting to it. Every time the crawler or monitoring task tries to dial or connect to a peer we consider this as _visiting_ it. Regardless of errors that may occur. 
 
 ### Node classification:
 
@@ -226,3 +214,11 @@ The number next to `Total` indicates the number of unique IP addresses that went
 - `unresolved` - The number of peer IDs that could not or just were not yet resolved to at least one IP address
 - `no public ip` - The number of peer IDs that were found in the DHT but didn't have a public IP address
 - `relay` - The number of peer IDs that were only reachable by circuit relays
+
+### Cloud Providers
+
+- `AWS` - Amazon Web Services
+- `GCP` - Google Cloud Platform
+- `Azure` - Microsoft Azure
+- `DO` - Digital Ocean
+- `OCI` - Oracle Cloud Infrastructure
