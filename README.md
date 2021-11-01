@@ -2,5 +2,9 @@
 
 ## IPFS
 
-- [Calendar Week 42](calendar-week-42/README.md)
-- [Calendar Week 43](calendar-week-43/README.md)
+- [Calendar Week 42](calendar-week-42/ipfs/README.md)
+- [Calendar Week 43](calendar-week-43/ipfs/README.md)
+
+## Filecoin
+
+- [Calendar Week 43](calendar-week-43/filecoin/README.md)
