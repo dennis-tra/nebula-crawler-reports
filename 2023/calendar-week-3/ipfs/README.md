@@ -11,20 +11,22 @@
     - [Top 10 Rotating Nodes](#top-10-rotating-nodes)
     - [Crawls](#crawls)
       - [Overall](#overall)
+      - [Classification](#classification-1)
       - [Agents](#agents)
+      - [Protocols](#protocols-1)
   - [Churn](#churn)
   - [Inter Arrival Time](#inter-arrival-time)
   - [Agent Version Analysis](#agent-version-analysis)
     - [Overall](#overall-1)
     - [Kubo](#kubo)
-    - [Classification](#classification-1)
+    - [Classification](#classification-2)
   - [Geolocation](#geolocation)
     - [Unique IP Addresses](#unique-ip-addresses)
-    - [Classification](#classification-2)
+    - [Classification](#classification-3)
     - [Agents](#agents-1)
   - [Datacenters](#datacenters)
     - [Overall](#overall-2)
-    - [Classification](#classification-3)
+    - [Classification](#classification-4)
     - [Agents](#agents-2)
   - [Top Updating Peers](#top-updating-peers)
     - [Peer Classification](#peer-classification)
@@ -38,6 +40,7 @@ The following results show measurement data that were collected in calendar week
 - Number of visits `38,807,571`
   > Visiting a peer means dialing or connecting to it. Every time the crawler or monitoring process tries to dial or connect to a peer we consider this as _visiting_ it. Regardless of errors that may occur.
 - Number of unique peer IDs visited `219,378`
+- Number of unique peer IDs discovered in the DHT `219,302`
 - Number of unique IP addresses found `61,897`
 
 Timestamps are in UTC if not mentioned otherwise.
@@ -97,7 +100,7 @@ Newly discovered protocols:
 
 ![Peer count by classification](./plots/peer-classifications.png)
 
-In the specified time interval from `2023-01-16` to `2023-01-23` we visited `219,378` unique peer IDs.
+In the specified time interval from `2023-01-16` to `2023-01-23` we visited `` unique peer IDs.
 All peer IDs fall into one of the following classifications:
 
 | Classification | Description |
@@ -132,6 +135,10 @@ A "rotating node" is a node (as identified by its IP address) that was found to 
 
 ![Crawl Overview](./plots/crawl-overview.png)
 
+#### Classification
+
+![Crawl Classifications](./plots/crawl-classifications.png)
+
 #### Agents
 
 ![Crawl Properties By Agent](./plots/crawl-properties.png)
@@ -139,6 +146,10 @@ A "rotating node" is a node (as identified by its IP address) that was found to 
 Only the top 10 kubo versions appear in the right graph (due to lack of colors) based on the average count in the time interval. The `0.8.x` versions **do not** contain disguised storm peers.
 
 `storm*` are `go-ipfs/0.8.0/48f94e2` peers that support at least one [storm specific protocol](#storm-specific-protocols).
+
+#### Protocols
+
+![Crawl Properties By Protocols](./plots/crawl-protocols.png)
 
 ## Churn
 
