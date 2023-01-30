@@ -8,6 +8,7 @@
 - [Calendar Week 1](2023/calendar-week-1/ipfs/README.md)
 - [Calendar Week 2](2023/calendar-week-2/ipfs/README.md)
 - [Calendar Week 3](2023/calendar-week-3/ipfs/README.md)
+- [Calendar Week 4](2023/calendar-week-4/ipfs/README.md)
 
 ## 2021
 
